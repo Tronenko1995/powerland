@@ -20,7 +20,8 @@
     <div class="header__wrap">
         <div class="header__left">
             <a href="#" class="header__left-logo-link">
-                <svg class="header__wrap-left-logo" width="334" height="160" viewBox="0 0 334 160" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <span class="header__left-logo"></span>
+                <!-- <svg class="header__wrap-left-logo" width="334" height="160" viewBox="0 0 334 160" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path
                         d="M38.0707 0L54.32 16.3286H91.8185C91.8185 16.3286 101.818 17.0308 101.818 26.4367C101.818 38.722 91.8185 38.722 91.8185 38.722H76.5066L71.9756 55.2061H94.3184C94.3184 55.2061 120.88 54.2731 120.88 26.4367C120.88 -3.8147e-06 91.8185 0 91.8185 0H38.0707Z"
                         fill="url(#paint0_linear)" />
@@ -118,18 +119,16 @@
                             <stop offset="1" stop-color="#16A085" />
                         </linearGradient>
                     </defs>
-                </svg>
+                </svg> -->
             </a>
             <div class="header__left-title">
                 <p class="header__left-title-text">CPA сеть</p>
-                <p class="header__left-title-text">только рабочие</p>
-                <p class="header__left-title-text">офферы от прямых</p>
-                <p class="header__left-title-text">рекламодателей</p>
+                <p class="header__left-title-text">только рабочие<br> офферы от прямых<br> рекламодателей</p>
                 <p class="header__left-title-description">товарная CPA сеть с авторскими офферами, высокими ставками и стабильным аппрувом.</p>
             </div>
         </div>
         <div class="header__right">
-            <ul class="header__right-nav">
+            <ul class="header__right-nav jsNav">
                 <li class="header__right-nav-item">
                     <a href="#" class="header__right-nav-item-link">Главная</a>
                 </li>
@@ -146,22 +145,39 @@
                     <a href="#" class="header__right-nav-item-link">Вебмастеру</a>
                 </li>
             </ul>
+            <div class="header__right-burger jsBurger"></div>
             <div class="header__right-form">
                 <div class="header__right-form-tab header__right-form-tab-1 jsTab">
                     <button class="header__right-form-tab-button header__right-form-tab-button-enter active jsTabs1">Вход</button>
                     <button class="header__right-form-tab-button header__right-form-tab-button-reg jsTabs2">Регистрация</button>
                     <form class="header__right-form-tab-forma jsForm1" action="">
-                        <input class="header__right-form-tab-input" placeholder="E-mail" type="text">
-                        <input class="header__right-form-tab-input" placeholder="Пароль" type="password">
+                        <label class="header__right-form-tab-label label-email">
+                            <input class="header__right-form-tab-input" placeholder="E-mail" type="text">
+                        </label>
+                        <label class="header__right-form-tab-label label-pass">
+                            <input class="header__right-form-tab-input" placeholder="Пароль" type="password">
+                        </label>
                         <button class="header__right-form-tab-enter">Войти</button>
                     </form>
                     <form class="header__right-form-tab-forma jsForm2 hide" action="">
-                        <input class="header__right-form-tab-input" placeholder="E-mail" type="text">
-                        <input class="header__right-form-tab-input" placeholder="Пароль" type="password">
-                        <input class="header__right-form-tab-input" placeholder="Телефон" type="text">
-                        <input class="header__right-form-tab-input" placeholder="Телеграм" type="text">
-                        <input class="header__right-form-tab-input" placeholder="Skype" type="text">
-                        <input class="header__right-form-tab-input" placeholder="Способ оплаты" type="text">
+                        <label class="header__right-form-tab-label label-email">
+                            <input class="header__right-form-tab-input" placeholder="E-mail" type="text">
+                        </label>
+                        <label class="header__right-form-tab-label label-pass">
+                            <input class="header__right-form-tab-input" placeholder="Пароль" type="password">
+                        </label>
+                        <label class="header__right-form-tab-label label-pass label-tel">
+                            <input class="header__right-form-tab-input" placeholder="Телефон" type="text">
+                        </label>
+                        <label class="header__right-form-tab-label label-pass label-teleg">
+                            <input class="header__right-form-tab-input" placeholder="Телеграм" type="text">
+                        </label>
+                        <label class="header__right-form-tab-label label-pass label-skype">
+                            <input class="header__right-form-tab-input" placeholder="Skype" type="text">
+                        </label>
+                        <label class="header__right-form-tab-label label-pass label-card">
+                            <input class="header__right-form-tab-input" placeholder="Способ оплаты" type="text">
+                        </label>
                         <button class="header__right-form-tab-enter">Войти</button>
                     </form>
                 </div>
@@ -194,6 +210,10 @@ $('.jsTabs2').on('click', function() {
         $('.jsTab').removeClass('header__right-form-tab-1').addClass('header__right-form-tab-2');
     }
 });
+$('.jsBurger').on('click', function() {
+    $(this).toggleClass('active');
+    $('.jsNav').toggleClass('active');
+})
 </script>
 </body>
 </html>
