@@ -56,3 +56,59 @@ body {
         }
     }
 }
+
+
+/* Слайдер */
+.slick-slider{
+	min-width: 0;
+}
+/* Ограничивающая оболочка */
+.slick-list {
+	overflow: hidden;
+}
+/* Лента слайдов */
+.slick-track{
+	display: flex;
+	align-items: flex-start;
+}
+.slick-slide{
+	outline: none;
+}
+.slick-dots {
+	display: flex;
+	position: absolute;
+    bottom: -47px;
+    left: 50%;
+    transform: translateX(-50%);
+	font-size: 0;
+	& li {
+		width: 9px;
+		height: 9px;
+		margin-right: 12px;
+
+		&:last-child {
+			margin-right: 0;
+		}
+	}
+	
+	& li button {
+        border: none;
+        outline: none;
+		color: transparent;
+		background: #D4DBDF;;
+		border-radius: 50%;
+        width: 9px;
+        height: 9px;
+		cursor: pointer;
+		font-size: 0;
+	}
+	& .slick-active button {
+        width: 13px;
+        height: 13px;
+        background: linear-gradient(69.04deg, #F4D03F 0.55%, #16A085 89.17%);
+	}
+}
+.slick-arrow {
+    border: none;
+    outline: none;
+}

@@ -1,3 +1,81 @@
+@-webkit-keyframes tremorMin {
+    0% {
+        transform: translateX(-2%);
+    }
+    50% {
+        transform: translateX(0%);
+    }
+    100% {
+        transform: translateX(-2%);
+    }
+}
+@-webkit-keyframes tremorMinY {
+    0% {
+        transform: translateY(-3%);
+    }
+    50% {
+        transform: translateY(0%);
+    }
+    100% {
+        transform: translateY(-3%);
+    }
+}
+@-webkit-keyframes tremorMaxY {
+    0% {
+        transform: translateY(3%) rotate(197deg);
+    }
+    50% {
+        transform: translateY(0%) rotate(197deg);
+    }
+    100% {
+        transform: translateY(3%) rotate(197deg);
+    }
+}
+@-webkit-keyframes tremorMaxYY {
+    0% {
+        transform: translateX(5%) rotate(197deg);
+    }
+    50% {
+        transform: translateX(-5%) rotate(197deg);
+    }
+    100% {
+        transform: translateX(5%) rotate(197deg);
+    }
+}
+@-webkit-keyframes tremorMax {
+    0% {
+        transform: translateX(2%);
+    }
+    50% {
+        transform: translateX(0%);
+    }
+    100% {
+        transform: translateX(2%);
+    }
+}
+@-webkit-keyframes tremorD1 {
+    0% {
+        transform: translateX(10%) rotate(45deg);
+    }
+    50% {
+        transform: translateX(-10%) rotate(45deg);
+    }
+    100% {
+        transform: translateX(10%) rotate(45deg);
+    }
+}
+@-webkit-keyframes tremorD2 {
+    0% {
+        transform: translateY(10%);
+    }
+    50% {
+        transform: translateY(-10%);
+    }
+    100% {
+        transform: translateY(10%);
+    }
+}
+
 .powerland {
 // background: #000;
 background: #F5F5F5;
@@ -183,6 +261,9 @@ background: #F5F5F5;
                         line-height: 17px;
                         color: #000000;
                     }
+                    &::-moz-placeholder {
+                        line-height: 45px;
+                    }
                 }
 
                 &-enter {
@@ -246,6 +327,7 @@ background: #F5F5F5;
             background-size: 1186px;
             top: -434px;
             right: -381px;
+            animation: 10s tremorMin ease infinite; 
         }
         &--senior {
             width: 1186px;
@@ -253,6 +335,7 @@ background: #F5F5F5;
             background-size: 1186px;
             top: -805px;
             right: -627px;
+            animation: 8s tremorMax ease infinite; 
         }
         &--middle {
             width: 432px;
@@ -260,6 +343,7 @@ background: #F5F5F5;
             background-size: 432px;
             top: 182px;
             right: -128px;
+            animation: 6s tremorMinY ease infinite; 
         }
         &--junior {
             width: 55px;
@@ -268,6 +352,7 @@ background: #F5F5F5;
             top: 603px;
             right: 256px;
             transform: rotate(243deg);
+            animation: 4s tremorMaxY ease infinite; 
         }
         &--biber {
             width: 23px;
@@ -276,6 +361,7 @@ background: #F5F5F5;
             top: 112px;
             right: 602px;
             transform: rotate(197deg);
+            animation: 2s tremorMaxYY ease infinite; 
         }
     }
     &__dots {
@@ -290,6 +376,7 @@ background: #F5F5F5;
             height: 64px;
             background-size: 64px;
             transform: rotate(45deg);
+            animation: 5s tremorD1 ease infinite; 
         }
         &--min {
             top: 135px;
@@ -297,6 +384,7 @@ background: #F5F5F5;
             width: 47px;
             height: 47px;
             background-size: 47px;
+            animation: 5s tremorD2 ease infinite; 
         }
     }
 }

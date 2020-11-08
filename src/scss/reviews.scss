@@ -1,0 +1,335 @@
+.powerland {
+
+    .reviews {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        // justify-content: center;
+        align-items: center;
+        margin-top: 126px;
+
+        &__title {
+            &-text {
+                font-family: Montserrat;
+                font-style: normal;
+                font-weight: 600;
+                font-size: 24px;
+                line-height: 29px;
+                text-align: center;
+                text-transform: uppercase;
+                color: #1F1F1F;
+            }
+        }
+        
+        &__wrap {
+            // width: 80%;
+            width: 920px;
+            display: flex;
+            flex-wrap: wrap;
+            // margin: 15px;
+            margin-top: 65px;
+            padding-bottom: 70px;
+        }
+        &__slider {
+            position: relative;
+            margin: -15px;
+            &-block {
+                background: #FFFFFF;               
+                box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+                border-radius: 8px;
+                width: 445px;
+                padding: 38px 7px 35px 18px;
+                &-row {
+                    display: flex;
+                    align-items: center;
+                    &-img {
+                        width: 58px;
+                        height: 58px;
+                        border-radius: 50%;
+                    }
+                    &-name {
+                        margin-left: 19px;
+                        font-family: Montserrat;
+                        font-style: normal;
+                        font-weight: 500;
+                        font-size: 14px;
+                        line-height: 17px;
+                        text-align: center;
+                        color: #000000;
+                        overflow-wrap: break-word;
+                    }
+                }
+                &-text {
+                    margin-top: 18px;
+                    font-family: Montserrat;
+                    font-style: normal;
+                    font-weight: normal;
+                    font-size: 12px;
+                    line-height: 15px;
+                    color: #000000;
+                    overflow-wrap: break-word;
+                }
+            }
+            .slick-slide {
+                padding: 15px;
+            }
+            .slick-arrow {
+                font-size: 0;
+                position: absolute;
+                width: 10px;
+                height: 20px;
+                z-index: 10;
+                cursor: pointer;
+                background: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPHN2ZyB3aWR0aD0iMTIiIGhlaWdodD0iMjIiIHZpZXdCb3g9IjAgMCAxMiAyMiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTEwLjY0NjQgMjEuMzUzNkMxMC44NDE3IDIxLjU0ODggMTEuMTU4MyAyMS41NDg4IDExLjM1MzYgMjEuMzUzNkMxMS41NDg4IDIxLjE1ODMgMTEuNTQ4OCAyMC44NDE3IDExLjM1MzYgMjAuNjQ2NEwxMC42NDY0IDIxLjM1MzZaTTEgMTFMMC42NDY0NDggMTAuNjQ2NEwwLjI5Mjg5NCAxMUwwLjY0NjQ0NyAxMS4zNTM1TDEgMTFaTTExLjM1MzYgMS4zNTM1NUMxMS41NDg4IDEuMTU4MjkgMTEuNTQ4OCAwLjg0MTcxMSAxMS4zNTM2IDAuNjQ2NDQ4QzExLjE1ODMgMC40NTExODUgMTAuODQxNyAwLjQ1MTE4NSAxMC42NDY0IDAuNjQ2NDQ2TDExLjM1MzYgMS4zNTM1NVpNMTEuMzUzNiAyMC42NDY0TDEuMzUzNTUgMTAuNjQ2NEwwLjY0NjQ0NyAxMS4zNTM1TDEwLjY0NjQgMjEuMzUzNkwxMS4zNTM2IDIwLjY0NjRaTTEuMzUzNTUgMTEuMzUzNUwxMS4zNTM2IDEuMzUzNTVMMTAuNjQ2NCAwLjY0NjQ0NkwwLjY0NjQ0OCAxMC42NDY0TDEuMzUzNTUgMTEuMzUzNVoiIGZpbGw9IiNDRkQ4REMiLz4KPC9zdmc+Cg==');
+                background-repeat: no-repeat;
+                top: 50%;
+
+                &:hover {
+                    background: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPHN2ZyB3aWR0aD0iMTIiIGhlaWdodD0iMjIiIHZpZXdCb3g9IjAgMCAxMiAyMiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTEwLjY0NjQgMjEuMzUzNkMxMC44NDE3IDIxLjU0ODggMTEuMTU4MyAyMS41NDg4IDExLjM1MzYgMjEuMzUzNkMxMS41NDg4IDIxLjE1ODMgMTEuNTQ4OCAyMC44NDE3IDExLjM1MzYgMjAuNjQ2NEwxMC42NDY0IDIxLjM1MzZaTTEgMTFMMC42NDY0NDggMTAuNjQ2NEwwLjI5Mjg5NCAxMUwwLjY0NjQ0NyAxMS4zNTM1TDEgMTFaTTExLjM1MzYgMS4zNTM1NUMxMS41NDg4IDEuMTU4MjkgMTEuNTQ4OCAwLjg0MTcxMSAxMS4zNTM2IDAuNjQ2NDQ4QzExLjE1ODMgMC40NTExODUgMTAuODQxNyAwLjQ1MTE4NSAxMC42NDY0IDAuNjQ2NDQ2TDExLjM1MzYgMS4zNTM1NVpNMTEuMzUzNiAyMC42NDY0TDEuMzUzNTUgMTAuNjQ2NEwwLjY0NjQ0NyAxMS4zNTM1TDEwLjY0NjQgMjEuMzUzNkwxMS4zNTM2IDIwLjY0NjRaTTEuMzUzNTUgMTEuMzUzNUwxMS4zNTM2IDEuMzUzNTVMMTAuNjQ2NCAwLjY0NjQ0NkwwLjY0NjQ0OCAxMC42NDY0TDEuMzUzNTUgMTEuMzUzNVoiIGZpbGw9IiMwMDAiLz4KPC9zdmc+Cg==');
+                    background-repeat: no-repeat;
+                }
+            }
+            .slick-prev {
+                // background-size: cover;
+                left: -30px;
+                transform: translateY(-50%);
+
+            }
+            .slick-next {
+                transform: translateY(-50%) rotate(180deg);
+                // background-size: cover;
+                background-repeat: no-repeat;
+                right: -30px;
+            }
+        }
+    }
+
+}
+
+@media (max-width: 1020px) {
+
+.powerland {
+
+    .reviews {
+        // width: 100%;
+        // display: flex;
+        // flex-direction: column;
+        // justify-content: center;
+        // align-items: center;
+        // margin-top: 126px;
+
+        &__title {
+            &-text {
+                // font-family: Montserrat;
+                // font-style: normal;
+                // font-weight: 600;
+                // font-size: 24px;
+                // line-height: 29px;
+                // text-align: center;
+                // text-transform: uppercase;
+                // color: #1F1F1F;
+            }
+        }
+        
+        &__wrap {
+            // width: 80%;
+            width: 445px;
+            // display: flex;
+            // flex-wrap: wrap;
+            // margin: 15px;
+            // padding-bottom: 53px;
+        }
+        &__slider {
+            // position: relative;
+            // margin: -15px;
+            &-block {
+                // background: #FFFFFF;               
+                // box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+                // border-radius: 8px;
+                // width: 445px;
+                // padding: 38px 7px 35px 18px;
+                &-row {
+                    // display: flex;
+                    // align-items: center;
+                    &-img {
+                        // width: 58px;
+                        // height: 58px;
+                        // border-radius: 50%;
+                    }
+                    &-name {
+                        // margin-left: 19px;
+                        // font-family: Montserrat;
+                        // font-style: normal;
+                        // font-weight: 500;
+                        // font-size: 14px;
+                        // line-height: 17px;
+                        // text-align: center;
+                        // color: #000000;
+                        // overflow-wrap: break-word;
+                    }
+                }
+                &-text {
+                    // margin-top: 18px;
+                    // font-family: Montserrat;
+                    // font-style: normal;
+                    // font-weight: normal;
+                    // font-size: 12px;
+                    // line-height: 15px;
+                    // color: #000000;
+                    // overflow-wrap: break-word;
+                }
+            }
+            .slick-slide {
+                // padding: 15px;
+            }
+            .slick-arrow {
+                // font-size: 0;
+                // position: absolute;
+                // width: 10px;
+                // height: 20px;
+                // z-index: 10;
+                // cursor: pointer;
+                // background: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPHN2ZyB3aWR0aD0iMTIiIGhlaWdodD0iMjIiIHZpZXdCb3g9IjAgMCAxMiAyMiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTEwLjY0NjQgMjEuMzUzNkMxMC44NDE3IDIxLjU0ODggMTEuMTU4MyAyMS41NDg4IDExLjM1MzYgMjEuMzUzNkMxMS41NDg4IDIxLjE1ODMgMTEuNTQ4OCAyMC44NDE3IDExLjM1MzYgMjAuNjQ2NEwxMC42NDY0IDIxLjM1MzZaTTEgMTFMMC42NDY0NDggMTAuNjQ2NEwwLjI5Mjg5NCAxMUwwLjY0NjQ0NyAxMS4zNTM1TDEgMTFaTTExLjM1MzYgMS4zNTM1NUMxMS41NDg4IDEuMTU4MjkgMTEuNTQ4OCAwLjg0MTcxMSAxMS4zNTM2IDAuNjQ2NDQ4QzExLjE1ODMgMC40NTExODUgMTAuODQxNyAwLjQ1MTE4NSAxMC42NDY0IDAuNjQ2NDQ2TDExLjM1MzYgMS4zNTM1NVpNMTEuMzUzNiAyMC42NDY0TDEuMzUzNTUgMTAuNjQ2NEwwLjY0NjQ0NyAxMS4zNTM1TDEwLjY0NjQgMjEuMzUzNkwxMS4zNTM2IDIwLjY0NjRaTTEuMzUzNTUgMTEuMzUzNUwxMS4zNTM2IDEuMzUzNTVMMTAuNjQ2NCAwLjY0NjQ0NkwwLjY0NjQ0OCAxMC42NDY0TDEuMzUzNTUgMTEuMzUzNVoiIGZpbGw9IiNDRkQ4REMiLz4KPC9zdmc+Cg==');
+                // background-repeat: no-repeat;
+                // top: 50%;
+
+                &:hover {
+                    // background: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPHN2ZyB3aWR0aD0iMTIiIGhlaWdodD0iMjIiIHZpZXdCb3g9IjAgMCAxMiAyMiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTEwLjY0NjQgMjEuMzUzNkMxMC44NDE3IDIxLjU0ODggMTEuMTU4MyAyMS41NDg4IDExLjM1MzYgMjEuMzUzNkMxMS41NDg4IDIxLjE1ODMgMTEuNTQ4OCAyMC44NDE3IDExLjM1MzYgMjAuNjQ2NEwxMC42NDY0IDIxLjM1MzZaTTEgMTFMMC42NDY0NDggMTAuNjQ2NEwwLjI5Mjg5NCAxMUwwLjY0NjQ0NyAxMS4zNTM1TDEgMTFaTTExLjM1MzYgMS4zNTM1NUMxMS41NDg4IDEuMTU4MjkgMTEuNTQ4OCAwLjg0MTcxMSAxMS4zNTM2IDAuNjQ2NDQ4QzExLjE1ODMgMC40NTExODUgMTAuODQxNyAwLjQ1MTE4NSAxMC42NDY0IDAuNjQ2NDQ2TDExLjM1MzYgMS4zNTM1NVpNMTEuMzUzNiAyMC42NDY0TDEuMzUzNTUgMTAuNjQ2NEwwLjY0NjQ0NyAxMS4zNTM1TDEwLjY0NjQgMjEuMzUzNkwxMS4zNTM2IDIwLjY0NjRaTTEuMzUzNTUgMTEuMzUzNUwxMS4zNTM2IDEuMzUzNTVMMTAuNjQ2NCAwLjY0NjQ0NkwwLjY0NjQ0OCAxMC42NDY0TDEuMzUzNTUgMTEuMzUzNVoiIGZpbGw9IiMwMDAiLz4KPC9zdmc+Cg==');
+                    // background-repeat: no-repeat;
+                }
+            }
+            .slick-prev {
+                // background-size: cover;
+                // left: -30px;
+                // transform: translateY(-50%);
+
+            }
+            .slick-next {
+                // transform: translateY(-50%) rotate(180deg);
+                // background-size: cover;
+                // background-repeat: no-repeat;
+                // right: -30px;
+            }
+        }
+    }
+
+}
+
+}
+
+@media (max-width: 500px) {
+
+    .powerland {
+    
+        .reviews {
+            // width: 100%;
+            // display: flex;
+            // flex-direction: column;
+            // justify-content: center;
+            // align-items: center;
+            margin-top: 65px;
+    
+            &__title {
+                &-text {
+                    // font-family: Montserrat;
+                    // font-style: normal;
+                    // font-weight: 600;
+                    // font-size: 24px;
+                    // line-height: 29px;
+                    // text-align: center;
+                    // text-transform: uppercase;
+                    // color: #1F1F1F;
+                }
+            }
+            
+            &__wrap {
+                // width: 80%;
+                width: 289px;
+                // display: flex;
+                // flex-wrap: wrap;
+                // margin: 15px;
+                // padding-bottom: 53px;
+                margin-top: 54px;
+            }
+            &__slider {
+                // position: relative;
+                // margin: -15px;
+                &-block {
+                    // background: #FFFFFF;               
+                    // box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+                    // border-radius: 8px;
+                    width: 289px;
+                    // padding: 38px 7px 35px 18px;
+                    &-row {
+                        // display: flex;
+                        // align-items: center;
+                        &-img {
+                            // width: 58px;
+                            // height: 58px;
+                            // border-radius: 50%;
+                        }
+                        &-name {
+                            // margin-left: 19px;
+                            // font-family: Montserrat;
+                            // font-style: normal;
+                            // font-weight: 500;
+                            // font-size: 14px;
+                            // line-height: 17px;
+                            // text-align: center;
+                            // color: #000000;
+                            // overflow-wrap: break-word;
+                        }
+                    }
+                    &-text {
+                        // margin-top: 18px;
+                        // font-family: Montserrat;
+                        // font-style: normal;
+                        // font-weight: normal;
+                        // font-size: 12px;
+                        // line-height: 15px;
+                        // color: #000000;
+                        // overflow-wrap: break-word;
+                    }
+                }
+                .slick-slide {
+                    // padding: 15px;
+                }
+                .slick-arrow {
+                    // font-size: 0;
+                    // position: absolute;
+                    // width: 10px;
+                    // height: 20px;
+                    // z-index: 10;
+                    // cursor: pointer;
+                    // background: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPHN2ZyB3aWR0aD0iMTIiIGhlaWdodD0iMjIiIHZpZXdCb3g9IjAgMCAxMiAyMiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTEwLjY0NjQgMjEuMzUzNkMxMC44NDE3IDIxLjU0ODggMTEuMTU4MyAyMS41NDg4IDExLjM1MzYgMjEuMzUzNkMxMS41NDg4IDIxLjE1ODMgMTEuNTQ4OCAyMC44NDE3IDExLjM1MzYgMjAuNjQ2NEwxMC42NDY0IDIxLjM1MzZaTTEgMTFMMC42NDY0NDggMTAuNjQ2NEwwLjI5Mjg5NCAxMUwwLjY0NjQ0NyAxMS4zNTM1TDEgMTFaTTExLjM1MzYgMS4zNTM1NUMxMS41NDg4IDEuMTU4MjkgMTEuNTQ4OCAwLjg0MTcxMSAxMS4zNTM2IDAuNjQ2NDQ4QzExLjE1ODMgMC40NTExODUgMTAuODQxNyAwLjQ1MTE4NSAxMC42NDY0IDAuNjQ2NDQ2TDExLjM1MzYgMS4zNTM1NVpNMTEuMzUzNiAyMC42NDY0TDEuMzUzNTUgMTAuNjQ2NEwwLjY0NjQ0NyAxMS4zNTM1TDEwLjY0NjQgMjEuMzUzNkwxMS4zNTM2IDIwLjY0NjRaTTEuMzUzNTUgMTEuMzUzNUwxMS4zNTM2IDEuMzUzNTVMMTAuNjQ2NCAwLjY0NjQ0NkwwLjY0NjQ0OCAxMC42NDY0TDEuMzUzNTUgMTEuMzUzNVoiIGZpbGw9IiNDRkQ4REMiLz4KPC9zdmc+Cg==');
+                    // background-repeat: no-repeat;
+                    // top: 50%;
+    
+                    &:hover {
+                        // background: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPHN2ZyB3aWR0aD0iMTIiIGhlaWdodD0iMjIiIHZpZXdCb3g9IjAgMCAxMiAyMiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTEwLjY0NjQgMjEuMzUzNkMxMC44NDE3IDIxLjU0ODggMTEuMTU4MyAyMS41NDg4IDExLjM1MzYgMjEuMzUzNkMxMS41NDg4IDIxLjE1ODMgMTEuNTQ4OCAyMC44NDE3IDExLjM1MzYgMjAuNjQ2NEwxMC42NDY0IDIxLjM1MzZaTTEgMTFMMC42NDY0NDggMTAuNjQ2NEwwLjI5Mjg5NCAxMUwwLjY0NjQ0NyAxMS4zNTM1TDEgMTFaTTExLjM1MzYgMS4zNTM1NUMxMS41NDg4IDEuMTU4MjkgMTEuNTQ4OCAwLjg0MTcxMSAxMS4zNTM2IDAuNjQ2NDQ4QzExLjE1ODMgMC40NTExODUgMTAuODQxNyAwLjQ1MTE4NSAxMC42NDY0IDAuNjQ2NDQ2TDExLjM1MzYgMS4zNTM1NVpNMTEuMzUzNiAyMC42NDY0TDEuMzUzNTUgMTAuNjQ2NEwwLjY0NjQ0NyAxMS4zNTM1TDEwLjY0NjQgMjEuMzUzNkwxMS4zNTM2IDIwLjY0NjRaTTEuMzUzNTUgMTEuMzUzNUwxMS4zNTM2IDEuMzUzNTVMMTAuNjQ2NCAwLjY0NjQ0NkwwLjY0NjQ0OCAxMC42NDY0TDEuMzUzNTUgMTEuMzUzNVoiIGZpbGw9IiMwMDAiLz4KPC9zdmc+Cg==');
+                        // background-repeat: no-repeat;
+                    }
+                }
+                .slick-prev {
+                    // background-size: cover;
+                    // left: -30px;
+                    // transform: translateY(-50%);
+    
+                }
+                .slick-next {
+                    // transform: translateY(-50%) rotate(180deg);
+                    // background-size: cover;
+                    // background-repeat: no-repeat;
+                    // right: -30px;
+                }
+                .slick-dots {
+                    display: flex;
+                    position: absolute;
+                    bottom: -38px;
+                }
+            }
+        }
+    
+    }
+    
+    }

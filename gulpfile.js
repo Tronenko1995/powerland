@@ -29,7 +29,11 @@ const cssFiles = [
   './src/scss/bullet.scss',
   './src/scss/adv-info.scss',
   './src/scss/web-info.scss',
-  './src/scss/start.scss'
+  './src/scss/start.scss',
+  './src/scss/offers.scss',
+  './src/scss/reviews.scss',
+  './src/scss/contact.scss',
+  './src/scss/footer.scss'
 ]
 
 function styles() {
