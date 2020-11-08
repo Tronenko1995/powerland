@@ -22,9 +22,14 @@ const cache = require('gulp-cache');
 
 //Порядок подключения css файлов
 const cssFiles = [
-  './src/scss/config.scss',
   './src/scss/fonts.scss',
-  './src/scss/header.scss'
+  './src/scss/config.scss',
+  './src/scss/svg.scss',
+  './src/scss/header.scss',
+  './src/scss/bullet.scss',
+  './src/scss/adv-info.scss',
+  './src/scss/web-info.scss',
+  './src/scss/start.scss'
 ]
 
 function styles() {
@@ -130,10 +135,10 @@ function watch() {
   gulp.watch('./src/scss/**/*.scss', styles);
   gulp.watch('./src/js/**/*.js', scripts);
   // gulp.watch("./src/img/**/*.{png,jpg,jpeg}", gulp.series(images, webpfun))
-  gulp.watch("./src/img/**/*.{png,jpg,jpeg}", images)
-  gulp.watch("./src/img/**/*.svg", sprite)
+  gulp.watch("./src/img/**/*.{png,jpg,jpeg}", images);
+  gulp.watch("./src/img/**/*.svg", sprite);
   gulp.watch('./src/libs/**/*.**', libs);
-  gulp.watch("./*.php").on('change', server.reload);
+  gulp.watch("./*.html").on('change', server.reload);
 }
 
 gulp.task('clean', clean);
